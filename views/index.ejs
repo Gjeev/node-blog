@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <div class="blog-page">
+        <div class="all-blogs">
+            <%if(blogs.length > 0) { for(const each of blogs) {%>
+            <div class="ind-blog">
+              <a class="" href="/blogs/<%= each._id%>"
+                ><h3 class="blog-title"><%=each.title%></h3>
+                <p class="blog-snippet"><%=each.snippet%></p></a
+              >
+            </div>
+            
+      
+            <%} } else {%>
+            <p>no blogs to display</p>
+            <h3><a href="/blogs/create">want to create a blog?</a></h3>
+            <% } %>
+          </div>
+          <!-- <div class="recent">
+            <h3>Popular Blogs: </h3>
+              <%for(let i = 0; i < 4; i++){%>
+              
+              <a href="/blogs/<%= blogs[i]._id%>"><p><%=blogs[i].title %></p></a>
+          <% } %>
+            </div> -->
+    </div>
+    
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

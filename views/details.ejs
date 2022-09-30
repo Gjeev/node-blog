@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body class="details-page">
+    <%- include("./partials/nav.ejs") %>
+    <div class="details">
+        <h2><%=blog.title %></h2>
+        <div class="content">
+            <p><%= blog.body %></p>
+        </div>
+        <a data-doc="<%= blog._id %>" class="delete"><i class="fa-solid fa-trash-can can"></i></a>
+        
+    </div>
+    <%- include("./partials/footer.ejs") %>
+    <script>
+        const trash = document.querySelector("a.delete");
+        trash.addEventListener("click", (e) => {
+            let val = confirm("are you sure you want to delete this entry?");
+            if(val == true)
+            {
+                const endpoint = `/blogs/${trash.dataset.doc}`;
+
+            fetch(endpoint , {
+                method: "DELETE"
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.redirect)
+            .catch((err) => console.log(err));
+            }
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&family=Noto+Serif&family=Tajawal:wght@300;400&display=swap");
+/* font-family: 'Merriweather', serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Tajawal', sans-serif; */
+
+/* colours
+--dark-sienna: #482728ff;
+--twilight-lavender: #7e4e60ff;
+--opera-mauve: #b287a3ff; */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  display: border-box;
+  margin: 0.25em;
+  padding: 0;
+}
+nav h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 2em;
+  color: #482728ff;
+  /* margin-left: 2em; */
+}
+.title a{
+  text-decoration: none;
+} 
+
+.links a,
+li,
+ul {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  /* margin-right: 1em; */
+  font-family: "Tajawal", sans-serif;
+}
+.links a {
+  color: #b287a3ff;
+}
+.links a:hover {
+  color: #482728ff;
+  text-decoration: underline;
+}
+.links li {
+  padding: 0.75em;
+  border: 1px solid white;
+  text-align: center;
+}
+.links li:hover {
+  padding: 0.75em;
+  border: 1px solid #482728ff;
+  border-radius: 5px;
+}
+.separator {
+  background-color: #482728ff;
+  height: 0.2vh;
+  margin-top: 5px;
+}
+.blog-page {
+  display: flex;
+
+}
+.all-blogs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  /* flex-basis: 75%; */
+}
+.ind-blog {
+  flex-basis: 30%;
+  background-color: rgb(201, 164, 188);
+  border-radius: 5px;
+  border: solid 3px rgb(201, 164, 188);
+}
+.ind-blog a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.ind-blog h3 {
+  color: black;
+  font-family: "Merriweather";
+  padding-left: 1em;
+}
+.ind-blog h3:hover {
+  text-decoration: underline;
+}
+.ind-blog:hover {
+  border: solid 3px #482728ff;
+  background-color: rgb(209, 182, 200);
+}
+.ind-blog p {
+  cursor: pointer;
+  font-family: "Tajawal";
+  color: white;
+  padding: 1em;
+}
+.ind-blog p:hover {
+  color: #7e4e60ff;
+}
+/* .recent {
+  flex-basis: 25%;
+}
+.recent h3 {
+  font-family: 'Noto Serif';
+  color:  #482728ff;
+  text-decoration: underline;
+  text-align: center;
+}
+.recent a,p {
+  font-family: 'Tajawal';
+  color: black;
+  text-decoration: none;
+  cursor:pointer;
+  
+}
+.recent p {
+  background-color: #b287a3ff; */
+  /* padding: 0.5em 0.25em;
+  text-align: center;
+}
+.recent p:hover {
+  /* background-color: #b287a3ff; */
+  /* padding: 0.5em 0.25em;
+  
+  text-align: center;
+  text-decoration: underline;
+} */ 
+.details-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 50%; */
+  align-items: center;
+  justify-content: center;
+  
+}
+.details h2 {
+  font-family: 'Noto Serif', serif;
+  color:#482728ff;
+  text-align: center;
+  padding: 0.25em 0;
+}
+.details p {
+  font-family: 'Tajawal';
+  font-size: smaller;
+  color:#7e4e60ff;
+  line-height: 35px;
+}
+.can {
+  color: red;
+  font-size: larger;
+  cursor: pointer;
+}
+.create-blog form {
+  max-width: 60%;
+
+}
+.create-blog input,textarea {
+  display: block;
+  width:100%;
+  min-height: 2em;
+  background-color: rgb(209, 182, 200);
+  border: solid 1px rgb(209, 182, 200);
+  border-radius: 4px;
+
+}
+.create-blog label {
+  font-family: 'Tajawal';
+  /* padding: 1em; */
+  /* margin-top: 1em; */
+}
+.create-blog textarea {
+  min-height: 5em;
+}
+.create-blog button {
+  /* margin: 1em; */
+  padding: 1em 1.5em;
+  margin-top: 1em;
+  font-family: "Tajawal";
+  color:white;
+  background-color: #482728ff;
+  border-radius: 5px;
+}
+.create-blog button:hover {
+  background-color: green;
+  text-decoration: underline;
+}
+.footer {
+  display: flex;
+  /* text-align: center; */
+  /* align-items: center; */
+  justify-content: center;
+  font-size: 1.5em;
+  color: #482728ff;
+}
+.footer a {
+  color:#482728ff;
+  text-decoration: none;
+}
+
